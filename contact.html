@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>CONTACT US</h3>
+            <input type="text" id="name" placeholder="Name" autocomplete="off">
+            <input type="email" id="email" placeholder="Email id"  autocomplete="off">
+            <input type="text" id="phone" placeholder="Phone no." autocomplete="off">
+            <textarea  id="message"  rows="4" placeholder="How Can We Help You ?" autocomplete="off"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+            let phone=document.getElementById("phone").value;
+            let message=document.getElementById("message").value;
+            Email.send({
+    // Host : "smtp.elasticemail.com",
+    // Username : "kashyapsiddhant3@gmail.com",
+    // Password : "651F414F6B23DA8E43B2F9492E607DAC0EB3",
+    SecureToken:"a88ceade-5be5-4bb6-9907-083d0a659145",
+    To : "siddhant21_ug@cse.nits.ac.in",
+    From : "kashyapsiddhant3@gmail.com",
+    Subject : "New Contact Form Eqnuiry",
+    Body : "Name:" + name+ "<br/> User Email :"+ email +"<br/> contact number :" + phone + "<br/> message :"+ message +"<br/>"
+}).then(
+  message => alert(message)
+);
+        }
+    </script>
+</body>
+</html>

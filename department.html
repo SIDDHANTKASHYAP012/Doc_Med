@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Website - Departments</title>
+    <link rel="stylesheet" href="department.css">
+</head>
+<body>
+    <header>
+        <h1>Doc Meds</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="departments.html">Departments</a></li>
+                <!-- Add more navigation links here -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Departments</h2>
+        <div class="departments-list">
+            <div class="department" onclick="showDepartmentInfo('Cardiology')">
+                <h3>Cardiology</h3>
+            </div>
+            <div class="department" onclick="showDepartmentInfo('Neurology')">
+                <h3>Neurology</h3>
+            </div>
+            <div class="department" onclick="showDepartmentInfo('Orthopedics')">
+                <h3>Orthopedics</h3>
+            </div>
+            <div class="department" onclick="showDepartmentInfo('Gastroenterology')">
+                <h3>Gastroenterology</h3>
+            </div>
+            <div class="department" onclick="showDepartmentInfo('Obstetrics and Gynecology')">
+                <h3>Obstetrics and Gynecology</h3>
+            </div>
+            <div class="department" onclick="showDepartmentInfo('Pediatrics')">
+                <h3>Pediatrics</h3>
+            </div>
+            <div class="department" onclick="showDepartmentInfo('Ophthalmology')">
+                <h3>Ophthalmology</h3>
+            </div>
+            <div class="department" onclick="showDepartmentInfo('Dermatology')">
+                <h3>Dermatology</h3>
+            </div>
+
+            <div class="department" onclick="showDepartmentInfo('Urology')">
+                <h3>Urology</h3>
+            </div>
+            <div class="department" onclick="showDepartmentInfo('Oncology')">
+                <h3>Oncology </h3>
+            </div>
+            <!-- Add more departments here -->
+        </div>
+
+        <div class="department-info" id="departmentInfo">
+            <!-- Department information will be displayed here -->
+        </div>
+    </div>
+
+    <script src="department.js"></script>
+</body>
+</html>

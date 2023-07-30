@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOIN AS DOCTOR</title>
+    <link rel="stylesheet" href="joinasdoctor.css">
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>JOIN AS DOCTOR</h3>
+            <input type="text" id="name" placeholder="Name" autocomplete="off" required>
+            <input type="email" id="email" placeholder="Email id"  autocomplete="off" required>
+            <input type="text" id="phone" placeholder="Phone no." autocomplete="off" required>
+            <input type="text" id="specialization" placeholder="specialization" autocomplete="off" required>
+            <input type="text" id="qualification" placeholder="qualification" autocomplete="off" required>
+            <button type="submit">JOIN</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+            let phone=document.getElementById("phone").value;
+            let specialization=document.getElementById("specialization").value;
+            let qualification=document.getElementById("qualification").value;
+            Email.send({
+    // Host : "smtp.elasticemail.com",
+    // Username : "kashyapsiddhant3@gmail.com",
+    // Password : "651F414F6B23DA8E43B2F9492E607DAC0EB3",
+    SecureToken:"a88ceade-5be5-4bb6-9907-083d0a659145",
+    To : "siddhant21_ug@cse.nits.ac.in",
+    From : "kashyapsiddhant3@gmail.com",
+    Subject : "New Contact Form Eqnuiry",
+    Body : "Name:" + name+ "<br/> User Email :"+ email +"<br/> contact number :" + phone + "<br/> specialization :"+ specialization +"<br/> qualification :"+qualification +"<br/>"
+}).then(
+  message => alert(message)
+);
+        }
+    </script>
+</body>
+</html>

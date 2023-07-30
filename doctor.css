@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Kaushan+Script&family=Poppins:wght@200;300;400;500;600;700&family=Raleway:wght@300&display=swap');
+
+/* font-family: 'Kablammo', cursive;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+ html{
+    font-size: 62.5%;
+ }
+ body{
+   overflow-x: hidden;
+ }
+ :root{
+    --mainclr:#239f85;
+    --secclr:#ff5d22;
+    --third:#DFE4E0;
+    --mainafterclr:hsl(167, 81%, 79%);
+    --fros-blue-color: #0050d5;
+    --light-blue-color: #16c5ff;
+   --colombia-blue-color:#9BDDFF;
+   --royal-blue-color:#4169e1;
+    --black:rgba(0, 0 , 0, 0.8);
+    --white:#fff;
+    --transition: all 0.3s ease-in-out;
+    --bgOrange: #e84949;
+    --clr-blue: #458ff6;
+    --clr-black: #000;
+    --clr-white: #fff;
+    --clr-gray: #7d7987;
+    --clr-dark-blue: #233348;
+    --clr-dark-purple: #1f1534;
+    --font-family-mulish: 'Mulish', sans-serif;
+    --transition-default: all 300ms ease-in-out;
+ }
+
+ /* css for navbar starts here  */
+ .navbar{
+    background-color: var(--light-blue-color);
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px, 50px,  100px, -20px, rgba(0, 0, 0, 0.3) , 0px, 30px, 60px, -30px;
+ }
+ 
+ .logoContainer img{
+    width:100px;
+    object-fit: contain;
+ }
+ nav{
+    width:40%;
+ }
+ 
+ nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+ }
+ nav a{
+    text-decoration: none;
+    font-size:1.1rem;
+    color:var(--mainColor);
+    font-family: 'Poppins', sans-serif;
+ }
+ nav a:hover{
+    color:white;
+ }
+ #menubar{
+    display: none;
+ }
+ @media screen and (max-width:990px){
+    html{
+        font-size: 15px;
+    }
+    nav{
+        max-width: 950px;
+    }
+ }
+ 
+ @media screen and (max-width:850px){
+    html{
+        font-size: 14px;
+    }
+    .navbar{
+        max-width: 670px;
+    }
+    nav ul{
+        background-color: #A91b60;
+        position: absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        display: block;
+        text-align: center;
+        padding:1em;
+        display: none;
+    }
+    nav li{
+        margin-bottom: 1em ;
+    }
+    nav a{
+        color: var(--ternary);
+        font-size:1.2em;
+    }
+    #menubar{ 
+        display: inline;
+    }
+ }
+ @media screen and (max-width:568px){
+    html{
+        font-size: 12px;
+    }
+    .logoContainer img{
+        width:80px;
+    }
+    .navbar{
+        max-width: 530px;
+    }
+ }
+
+ /* navbar ends here */
+
+
+/* 
+defining wrapper  */
+
+ #wrapper{
+    margin:0 auto;
+    max-width: 1300px;
+ }
+ /* section 1 starts here  */
+ .container{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin:0 1em;
+    width:100%;
+ }
+ .content-box{
+    width:45%;
+    padding: 0.3em; 
+ }
+ .content-box h1{
+    font-size: 2.8rem;
+    font-family: 'Raleway', sans-serif;
+    color:var(--royal-blue-color);
+ }
+ .health{
+    font-size: 3rem;
+    font-family: 'Kaushan Script', cursive;
+    /* if i dont give display property then margin widht height 
+    will not gonna work on inline element */
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+ }
+ .content-box p{
+    font-family: 'Poppins', sans-serif;
+    color:var(--black);
+    font-size: 0.9rem;
+    margin: 0.5em 0;
+ }
+ 
+ .imgContainer img{
+ max-width: 100%;
+ }
+ /* media queries for section 1 */
+   @media screen  and (max-width:990px){
+    .container{
+        max-width: 950px;
+   }
+   }
+   @media screen and (max-width:768px){
+    .container{
+        flex-direction: column;
+    }
+    .content-box{
+        width: 85%;
+    }
+    .container h1{
+        font-size: 2.2rem;
+        margin-top: .5em;
+    }
+    .health{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .btn{
+        width:25%;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    .imgContainer img{
+       max-width: 80%;
+        /* see without giving display block . if u directly write margin 
+        then image will not come in center because image are inline object; */
+        display: block;
+        margin: 0 auto ;
+     }
+   }
+   @media screen and (max-width:600px){
+ .btn{
+    width:30%;
+ }
+   }
+   @media screen and (max-width:450px){
+    html{
+        font-size: 12px;
+    }
+    .container{
+        flex-direction: column-reverse;
+   }
+   .container h1{
+    text-align: center;
+   }
+   .btn{
+    width: 40%;
+   }
+ }
+ 
+ /* section 1 ends here */
+
+
+ /* section 2 stars here  */
+
+
+/* 
+free support wala section starts here  */
+
+.promotion{
+    justify-content: space-between;
+    margin-top: 7.5em;
+    background-image: linear-gradient(var(--colombia-blue-color), var(--light-blue-color), var(--royal-blue-color));
+ }
+ .cards{
+    background-color:white;
+    margin-top: 1.1rem;
+    width:40%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 3px grey;
+ }
+ .cards img{
+    width:50%;
+ }
+ .cardContent{
+    padding: 1em;
+    width:100%;
+    text-align: center;
+ }
+ .cardContent h1{
+    font-family: 'Kaushan Script', cursive;
+ }
+ .btnall{
+    width: 80%;
+ }
+ 
+ /* media queries for section 2 */
+ 
+ @media screen and (max-width:990px){
+    .btnall{
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    .cardContent h1{
+        font-size: 1.5rem;
+    }
+ }
+ @media screen and (max-width:768px){
+  .cards{
+    width:90%;
+  }
+  .btnall{
+    width:35%;
+  }
+  .cardContent{
+    text-align: right;
+  }
+  .cardImg{
+    width:80%;
+  }
+ }
+ @media screen and (max-width:568px){
+    .cardImg{
+        width:50%;
+      }
+      .btnall{
+        width:50%;
+      }
+ }
+ @media screen and (max-width:450px){
+    .btnall{
+        width:100%;
+    }
+ }
+
+ /* section 3 starts here  */
+
+/* quotes h likha hua and yaha wrapper hata ye then again secion 4 me laga diye h */
+
+
+ .quotes{
+    position: relative;
+    width:100%;
+    height:400px;
+   background-color:var(--fros-blue-color);
+
+ }
+ .quotesImg{
+    height:100%;
+    width:100%;
+    object-fit: contain;
+    position: absolute;
+    opacity: 0.4;
+ }
+ .quotes .lead{
+    color: black;
+    font-size: 2.8rem;
+    font-weight: 500;
+    max-width: 600px;
+}
+.quotes .text-sm{
+    font-weight: 500;
+}
+.wholetext{
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.text{
+    text-align: center;
+    color:black;
+    font-size: 1.5rem;;
+}
+
+/* media queries for section 3  */
+@media screen and (max-width:990px){
+    .quotes{
+        max-width: 990px;
+    }
+    .quotes .lead{
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width:768px){
+    .quotes{
+        max-width: 768px;
+    }
+    .quotes .lead{
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width:568px){
+    .quotes{
+        max-width: 568px;
+    }
+    .quotes .lead{
+        font-size: 1.1rem;
+    }
+}
+@media screen and (max-width:400px){
+    .quotes{
+        max-width: 400spx;
+    }
+    .quotes .lead{
+        font-size: 0.7rem;
+    }
+}
+
+/* section 3 ends here  */
+
+/* section 4 starts here */
+/* service section  */
+
+ .title h1{
+  /* background-color:violet; */
+   font-size: 2.8rem;
+   text-align: center;
+   margin-top: 2rem;
+   font-family: 'Raleway', sans-serif;
+ }
+ .productCards{
+  /* background-color: #4169e1;  */
+   flex-wrap: wrap;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin: 2em 0;
+ }
+ .productCard{
+ width:22%;
+ padding: 0 1em;
+ box-shadow: 4px 4px 20px -5px var(--royal-blue-color);
+ margin-bottom: 1.5em;
+ }
+ .productCard img{
+  width:90%;
+  margin: 0 auto;
+  display: block;
+  height: 200px;
+  object-fit: contain;
+ }
+
+ .productCard h2{
+  font-size: 1.8rem;
+  font-family: 'Kaushan Script', cursive;
+  color:var(--mainColor);
+ }
+ .productCard p{
+  /* background-color: aqua; */
+  text-align: center;
+  transform: translateY(-20%);
+ }
+
+/* 
+ media queries for section 4 */
+  @media screen and (max-width:990px){
+   .productCard{
+       width:30%; 
+   }
+ }
+ @media screen and (max-width:768px){
+     .productCard{
+       width:40%;
+     }
+ }
+
+ @media screen and (max-width:568px){
+   .productCard{
+     width:80%;
+   }
+   .title h1{
+       font-size: 2.5rem;
+   } 
+   .productCard img{
+       height: 200px;
+      }
+} 
+.serviceText{
+   text-align: center;
+   margin-bottom: 0.5em;
+}
+
+/* 
+section 4 ends here  */
+
+/* section 5 starts here */
+/* icons section starts here */
+
+.icons-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+ .icons .fa-solid{
+    font-size: 4rem;
+}
+.icons h3{
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif; ;
+}
+.icons p{
+    margin-top:0.5rem;
+    font-family: 'Kaushan Script', cursive;
+}
+.icons-container .icons{
+    padding:5rem;
+    box-shadow: 4px 4px 20px -5px var(--royal-blue-color);
+}
+/* icons section end here */
+
+/* section 5 ends here */
+
+/* section 6 starts here */
+/* book and appointment wala part yaha bhi wrapper hata diye h  */
+
+
+.Appointment{
+  position: relative;
+    width:100%;
+    height:400px;
+ background-color:var(--royal-blue-color);
+}
+.appointmentImg{
+  position: absolute;
+    opacity: 0.3;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.content-box1 {
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content-box1 h1{
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+ .button{
+    flex-wrap: wrap;
+  margin-top: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    padding:0.4rem;
+    margin-left: 0.5rem;
+    gap:20px;
+
+}
+.btn1{
+    border-radius: 30px;;
+}
+.button .btn2{
+    width:50%;
+    border-radius: 30px;;
+}
+/* 
+section 6 ends here */
+/* booking and appointment wala part */
+
+/* footer starts here  */
+.footer{
+    width:100%;
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding :1.5rem;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+.footerText{
+    width:20%;
+}
+.footerText p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+.footerText h2{
+    color:var(--bgOrange);
+    margin-bottom: 0.3rem;
+}
+.fab{
+    font-size: 1.2rem;
+    margin-left: .8em;
+    margin-top: 1em;
+    text-shadow: -1px -1px var(--bgOrange);
+    transition: transform 0.5s;
+}
+.fab:hover{
+    color:var(--mainColor);
+    text-shadow: -1px -1px var(--white);
+    transform: translateY(2px);
+}
+
+@media screen and (max-width:768px){
+     .footer{
+        flex-direction: row;
+     }
+     .footerText{
+        width:40%;
+        margin-bottom: 1em;
+     }
+     .footerText h2{
+        font-size: 1.2rem;
+     }
+}
+@media screen and (max-width:568px){
+     .footer{
+        text-align: center;
+     }
+     .footerText{
+        width:80%;
+        margin-bottom: 1em;
+     }
+}
+/* footer ends here  */
+.btn3{
+    text-decoration: none;
+}
+.book{
+    text-decoration: none;
+    color:black
+}
+
+
+.why-choseus{
+    font-size: 62.5;
+    padding: 4rem 7%;
+}
+.main-chose{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.inner-chose{
+    flex: 1 1 45rem;
+}
+.inner-chose img{
+    width: 100%;
+}
+.inner-chose h1{
+    font-size: 40px;
+    color: #239f85;
+    margin-bottom: 20px;
+}
+.sub{
+    font-size: 30px;
+    color: #14c13f;
+    margin-bottom: 10px;
+}
+.main-inner-chose{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    
+}
+.chose-icon i{
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    background: white;
+    color: #239f85;
+    font-size: 3rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.icon-content{
+    padding: 0 4rem;
+}
+.icon-content p{
+    font-size: 1.5rem;
+    line-height: 1;
+}
+/* k */
+
+
+.blog{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+#bloga{
+    font-size: 2rem;
+    color:#365ED9;
+    text-transform: uppercase;
+   text-align: center;
+   margin-top: 2rem;
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   margin-bottom: -0.8rem;
+}
+#blogb{
+    margin-bottom: 2rem;;
+    font-size: 4rem;
+    font-family: "Poppins", sans-serif;
+    color:hsl(217, 100%, 12%);
+}
