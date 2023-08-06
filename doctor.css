@@ -41,7 +41,7 @@ font-family: 'Raleway', sans-serif; */
 
  /* css for navbar starts here  */
  .navbar{
-    background-color: var(--mainclr);
+    background-color: #239f85;
     max-width: 1300px;
     width: 100%;
     margin: 0 auto;
