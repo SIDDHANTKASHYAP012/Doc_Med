@@ -11,7 +11,7 @@ font-family: 'Raleway', sans-serif; */
     box-sizing: border-box;
  }
  html{
-    font-size: 62.5%;
+    font-size: 80%;
  }
  body{
    overflow-x: hidden;
@@ -41,7 +41,7 @@ font-family: 'Raleway', sans-serif; */
 
  /* css for navbar starts here  */
  .navbar{
-    background-color: var(--light-blue-color);
+    background-color: var(--mainclr);
     max-width: 1300px;
     width: 100%;
     margin: 0 auto;
@@ -240,7 +240,7 @@ free support wala section starts here  */
 
 .promotion{
     justify-content: space-between;
-    margin-top: 7.5em;
+    margin-top: 5.5em;
     background-image: linear-gradient(var(--colombia-blue-color), var(--light-blue-color), var(--royal-blue-color));
  }
  .cards{
